@@ -1,269 +1,183 @@
+import {
+  Popover,
+  PopoverBackdrop,
+  PopoverButton,
+  PopoverPanel,
+} from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function Home() {
   return (
-    // <div classNameName="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    //   <main classNameName="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-    //     <Image
-    //       classNameName="dark:invert"
-    //       src="/finovate-logo.png"
-    //       alt="Finovate logo"
-    //       width={60}
-    //       height={40}
-    //       priority
-    //     />
-    //     <ol classNameName="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-    //       <li classNameName="mb-2 tracking-[-.01em]">
-    //         Get started by editing{" "}
-    //         <code classNameName="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-    //           app/page.tsx
-    //         </code>
-    //         .
-    //       </li>
-    //       <li classNameName="tracking-[-.01em]">
-    //         Save and see your changes instantly.
-    //       </li>
-    //     </ol>
-
-    //     <div classNameName="flex gap-4 items-center flex-col sm:flex-row">
-    //       <a
-    //         classNameName="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         <Image
-    //           classNameName="dark:invert"
-    //           src="/vercel.svg"
-    //           alt="Vercel logomark"
-    //           width={20}
-    //           height={20}
-    //         />
-    //         Deploy now
-    //       </a>
-    //       <a
-    //         classNameName="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-    //         href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Read our docs
-    //       </a>
-    //     </div>
-    //   </main>
-    //   <footer classNameName="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-    //     <a
-    //       classNameName="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/file.svg"
-    //         alt="File icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Learn
-    //     </a>
-    //     <a
-    //       classNameName="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/window.svg"
-    //         alt="Window icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Examples
-    //     </a>
-    //     <a
-    //       classNameName="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/globe.svg"
-    //         alt="Globe icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Go to nextjs.org →
-    //     </a>
-    //   </footer>
-    // </div>
-
-    <header className="pb-6 bg-[#008080] md:pb-0 text-white">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-        {/* <!-- lg+ --> */}
-        <nav className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex-shrink-0">
-            <a href="/" title="" className="flex items-center">
-              <Image
-                className="dark:invert"
-                src="/finovate-logo.png"
-                alt="Finovate logo"
-                width={50}
-                height={32}
-                priority
-              />
-              <div className="flex flex-col">
-                <span className="font-semibold text-xl leading-4">
-                  FINOVATE
-                </span>
-                <span className="text-xs italic">Consulting Limited</span>
-              </div>
-            </a>
-          </div>
-
-          <button
-            type="button"
-            className="inline-flex p-2 text-black transition-all duration-200 rounded-md md:hidden focus:bg-gray-100 hover:bg-gray-100"
-          >
-            {/* <!-- Menu open: "hidden", Menu closed: "block" --> */}
-            <svg
-              className="block w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 8h16M4 16h16"
-              />
-            </svg>
-
-            {/* <!-- Menu open: "block", Menu closed: "hidden" --> */}
-            <svg
-              className="hidden w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          <div className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
-            {/* <a
-              href="#"
-              title=""
-              className="text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-            >
-              {" "}
-              Features{" "}
-            </a> */}
-
-            <a
-              href="#"
-              title=""
-              className="text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-            >
-              {" "}
-              Services{" "}
-            </a>
-
-            <a
-              href="#"
-              title=""
-              className="text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-            >
-              {" "}
-              Consultants{" "}
-            </a>
-
-            <a
-              href="#"
-              title=""
-              className="text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-            >
-              {" "}
-              Pricing{" "}
-            </a>
-          </div>
-
-          <a
-            href="#"
-            title=""
-            className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#C0C0C0] border border-transparent rounded-md md:inline-flex hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
-            role="button"
-          >
-            {" "}
-            Get started now{" "}
-          </a>
-        </nav>
-
-        {/* <!-- xs to lg --> */}
-        <nav className="pt-4 pb-6 bg-[#008080] border border-gray-200 rounded-md shadow-md md:hidden">
-          <div className="flow-root">
-            <div className="flex flex-col px-6 -my-2 space-y-1">
-              {/* <a
-                href="#"
-                title=""
-                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-              >
-                {" "}
-                Features{" "}
-              </a> */}
-
-              <a
-                href="#"
-                title=""
-                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-              >
-                {" "}
-                Services{" "}
-              </a>
-
-              <a
-                href="#"
-                title=""
-                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-              >
-                {" "}
-                Consultants{" "}
-              </a>
-
-              <a
-                href="#"
-                title=""
-                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0]"
-              >
-                {" "}
-                Pricing{" "}
-              </a>
+    <>
+      <header>
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8 fixed left-0 right-0 top-0 bg-white shadow-md">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <div className="flex-shrink-0">
+              <Link href="/" className="flex items-center">
+                <Image
+                  className="dark:invert"
+                  src="/finovate-logo.png"
+                  alt="Finovate logo"
+                  width={50}
+                  height={32}
+                  priority
+                />
+                <div className="flex flex-col text-[#008080]">
+                  <span className="font-semibold text-xl leading-4">
+                    FINOVATE
+                  </span>
+                  <span className="text-xs italic">Consulting Limited</span>
+                </div>
+              </Link>
             </div>
-          </div>
 
-          <div className="px-6 mt-6">
-            <a
+            <Popover className="group">
+              <PopoverButton className="focus:outline-none inline-flex p-2 cursor-pointer text-black transition-all duration-200 rounded-md md:hidden focus:bg-gray-100 hover:bg-gray-100">
+                <AiOutlineClose className="text-[#008080] text-3xl hidden group-data-[open]:block" />
+                <AiOutlineMenu className="text-[#008080] text-3xl group-data-[open]:hidden" />
+              </PopoverButton>
+              <PopoverBackdrop
+                transition
+                className="fixed inset-0 bg-black/15 top-[64px] transition duration-300 ease-out data-[closed]:opacity-0"
+              />
+              <PopoverPanel
+                transition
+                className="absolute transition duration-300 ease-in-out left-0 data-[closed]:-translate-x-[100%] h-[calc(100vh-64px)] top-[64px] bg-white w-4/5 min-[425px]:w-1/2 p-4 pl-8 pb-10"
+              >
+                <nav>
+                  <div className="flow-root">
+                    <div className="flex flex-col -my-2 space-y-1">
+                      <Link
+                        href="#"
+                        className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                      >
+                        Services
+                      </Link>
+
+                      <Link
+                        href="#"
+                        className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                      >
+                        Consultants
+                      </Link>
+
+                      <Link
+                        href="#"
+                        className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                      >
+                        Pricing
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <Link
+                      href="#"
+                      className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
+                      role="button"
+                    >
+                      Get started now
+                    </Link>
+                  </div>
+                </nav>
+              </PopoverPanel>
+            </Popover>
+
+            <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
+              <Link
+                href="#"
+                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+              >
+                Services
+              </Link>
+
+              <Link
+                href="#"
+                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+              >
+                Consultants
+              </Link>
+
+              <Link
+                href="#"
+                className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+              >
+                Pricing
+              </Link>
+            </nav>
+
+            <Link
               href="#"
-              title=""
-              className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#C0C0C0] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
+              className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md md:inline-flex hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
               role="button"
             >
-              {" "}
-              Get started now{" "}
-            </a>
+              Get started now
+            </Link>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+
+        <div className="py-30">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+            <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+              <div>
+                <p className="text-base font-semibold tracking-wider uppercase">
+                  Lorem ipsum dolor sit amet.
+                </p>
+                <h1 className="mt-4 text-4xl font-bold lg:mt-8 sm:text-6xl">
+                  Lorem ipsum dolor sit amet.
+                </h1>
+                <p className="mt-4 text-base lg:mt-8 sm:text-xl">
+                  Lorem ipsum dolor sit amet.
+                </p>
+
+                {/* <a
+                  href="#"
+                  title=""
+                  className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-[#008080] rounded-full lg:mt-16 hover:bg-yellow-400 focus:bg-yellow-400"
+                  role="button"
+                >
+                  Join for free
+                  <svg
+                    className="w-6 h-6 ml-8 -mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </a> */}
+
+                {/* <p className="mt-5 text-gray-600">
+                  Already joined us?{" "}
+                  <a
+                    href="#"
+                    title=""
+                    className="text-black transition-all duration-200 hover:underline"
+                  >
+                    Log in
+                  </a>
+                </p> */}
+              </div>
+
+              <div>
+                <img
+                  className="w-full"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
