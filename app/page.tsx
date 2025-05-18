@@ -8,12 +8,18 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import * as motion from "motion/react-client";
 
 export default function Home() {
   return (
     <>
       <header className="h-screen">
-        <div className="bg-white shadow-md w-full fixed left-0 right-0 top-0 z-50">
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white shadow-md w-full fixed left-0 right-0 top-0 z-50"
+        >
           <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
             <div className="flex items-center justify-between h-16 md:h-20">
               <div className="flex-shrink-0">
@@ -108,9 +114,14 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center"
+        >
           <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
             <div className="grid items-center grid-cols-1 md:grid-cols-2">
               <div>
@@ -134,7 +145,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </header>
 
       <main>
