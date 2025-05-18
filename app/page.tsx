@@ -151,17 +151,27 @@ export default function Home() {
       <main>
         <section className="py-12 bg-white sm:py-16 lg:py-20" id="services">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="text-center">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="text-center"
+            >
               <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl font-pj">
                 Our Services
               </h2>
               <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-8 font-pj">
                 Lorem ipsum dolor sit amet, consectetur adipis elit
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
-              <div className="md:p-8 lg:p-14">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14"
+              >
                 <svg
                   className="mx-auto"
                   width="46"
@@ -204,9 +214,14 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14 md:border-l md:border-gray-200"
+              >
                 <svg
                   className="mx-auto"
                   width="46"
@@ -265,9 +280,14 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14 md:border-l md:border-gray-200"
+              >
                 <svg
                   className="mx-auto"
                   width="42"
@@ -317,9 +337,14 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="md:p-8 lg:p-14 md:border-t md:border-gray-200">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14 md:border-t md:border-gray-200"
+              >
                 <svg
                   className="mx-auto"
                   width="42"
@@ -372,9 +397,14 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t"
+              >
                 <svg
                   className="mx-auto"
                   width="46"
@@ -408,9 +438,14 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+                className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t"
+              >
                 <svg
                   className="mx-auto"
                   width="44"
@@ -444,7 +479,7 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
                   nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
