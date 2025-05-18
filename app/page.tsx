@@ -12,18 +12,18 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="h-screen">
         <div className="bg-white shadow-md w-full fixed left-0 right-0 top-0">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
             <div className="flex items-center justify-between h-16 md:h-20">
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
                   <Image
-                    className="dark:invert"
                     src="/finovate-logo.png"
                     alt="Finovate logo"
-                    width={50}
-                    height={32}
+                    width={40}
+                    height={0}
+                    style={{ width: "auto", height: "auto" }}
                     priority
                   />
                   <div className="flex flex-col text-[#008080]">
@@ -66,21 +66,13 @@ export default function Home() {
                         >
                           Consultants
                         </CloseButton>
-
-                        <CloseButton
-                          as={Link}
-                          href="#"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          Pricing
-                        </CloseButton>
                       </div>
                     </div>
 
                     <div className="mt-6">
                       <CloseButton
                         as={Link}
-                        href="#"
+                        href="#book-a-session"
                         className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
                         role="button"
                       >
@@ -105,17 +97,10 @@ export default function Home() {
                 >
                   Consultants
                 </Link>
-
-                <Link
-                  href="#"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
-                >
-                  Pricing
-                </Link>
               </nav>
 
               <Link
-                href="#"
+                href="#book-a-session"
                 className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md md:inline-flex hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
                 role="button"
               >
@@ -125,38 +110,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-20 md:pt-30">
-          <div className="px-4 mx-auto max-w-4xl sm:px-6 md:px-8">
-            <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+            <div className="grid items-center grid-cols-1 md:grid-cols-2">
               <div>
-                <h1 className="mt-4 text-4xl font-medium md:text-5xl">
+                <h1 className="mt-4 text-4xl font-medium md:text-5xl text-[#008080]">
                   FINOVATE Consulting Limited
                 </h1>
-                <p className="mt-4 text-base font-normal text-gray-600">
+                <p className="mt-4 text-base font-normal text-[#C0C0C0]">
                   We are a team of experienced consultants dedicated to
                   providing top-notch consulting services to help your business
                   thrive.
                 </p>
                 <div className="mt-6">
                   <Link
-                    href="#"
+                    href="#book-a-session"
                     className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
                     role="button"
                   >
                     Book a Session
                   </Link>
                 </div>
-              </div>
-
-              <div className="hidden  md:block">
-                <Image
-                  className="w-full"
-                  width={300}
-                  height={0}
-                  priority
-                  src="/finovate-logo.png"
-                  alt=""
-                />
               </div>
             </div>
           </div>
@@ -173,6 +147,56 @@ export default function Home() {
           </p>
         </div>
       </main>
+
+      <footer className="py-10 bg-[#4A4A4A] text-white" id="book-a-session">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-16 gap-x-12">
+            <div className="sm:col-span-2">
+              <form action="#" className="mt-6">
+                <p>Send a message to book a session</p>
+                <div className="mt-3">
+                  <label htmlFor="email" className="">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                  />
+                </div>
+
+                <div className="mt-3">
+                  <label htmlFor="message" className="">
+                    Enter your message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={5}
+                    placeholder=" Enter your message"
+                    className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="inline-flex justify-center px-4 py-3 mt-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#C0C0C0] focus:bg-[#C0C0C0] cursor-pointer"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <hr className="mt-16 mb-10 border-gray-200" />
+
+          <p className="text-sm text-center text-gray-600">
+            © Copyright 2025, All Rights Reserved
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
