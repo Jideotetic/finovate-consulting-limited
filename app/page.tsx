@@ -60,7 +60,7 @@ export default function Home() {
                         <CloseButton
                           as={Link}
                           href="#services"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black  hover:text-[#008080] focus:text-[#008080]"
                         >
                           Services
                         </CloseButton>
@@ -68,7 +68,7 @@ export default function Home() {
                         <CloseButton
                           as={Link}
                           href="#consultants"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
                           Consultants
                         </CloseButton>
@@ -92,14 +92,14 @@ export default function Home() {
               <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
                 <Link
                   href="#services"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   Services
                 </Link>
 
                 <Link
                   href="#consultants"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-[#008080] focus:text-[#008080]"
+                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   Consultants
                 </Link>
