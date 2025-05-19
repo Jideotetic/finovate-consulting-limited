@@ -25,19 +25,13 @@ export default function Home() {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/finovate-logo.png"
+                    src="/finovate.png"
                     alt="Finovate logo"
-                    width={40}
+                    width={50}
                     height={0}
                     style={{ width: "auto", height: "auto" }}
                     priority
                   />
-                  <div className="flex flex-col text-[#008080]">
-                    <span className="font-semibold text-xl leading-4">
-                      FINOVATE
-                    </span>
-                    <span className="text-xs italic">Consulting Limited</span>
-                  </div>
                 </Link>
               </div>
 
@@ -59,31 +53,41 @@ export default function Home() {
                       <div className="flex flex-col -my-2 space-y-1">
                         <CloseButton
                           as={Link}
-                          href="#services"
+                          href="/"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black  hover:text-[#008080] focus:text-[#008080]"
                         >
-                          Services
+                          Home
                         </CloseButton>
 
                         <CloseButton
                           as={Link}
-                          href="#consultants"
+                          href="about-us"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
-                          Consultants
+                          About Us
+                        </CloseButton>
+                        <CloseButton
+                          as={Link}
+                          href="services"
+                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                        >
+                          Our Services
+                        </CloseButton>
+                        <CloseButton
+                          as={Link}
+                          href="contact"
+                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                        >
+                          Contact
+                        </CloseButton>
+                        <CloseButton
+                          as={Link}
+                          href="faq"
+                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                        >
+                          FAQ
                         </CloseButton>
                       </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <CloseButton
-                        as={Link}
-                        href="#book-a-session"
-                        className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
-                        role="button"
-                      >
-                        Book a Session
-                      </CloseButton>
                     </div>
                   </nav>
                 </PopoverPanel>
@@ -91,33 +95,43 @@ export default function Home() {
 
               <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
                 <Link
-                  href="#services"
+                  href="/"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
-                  Services
+                  Home
                 </Link>
 
                 <Link
-                  href="#consultants"
+                  href="about-us"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
-                  Consultants
+                  About Us
+                </Link>
+                <Link
+                  href="services"
+                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="contact"
+                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="faq"
+                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
+                >
+                  FAQ
                 </Link>
               </nav>
-
-              <Link
-                href="#book-a-session"
-                className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md md:inline-flex hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
-                role="button"
-              >
-                Book a Session
-              </Link>
             </div>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center"
@@ -128,20 +142,14 @@ export default function Home() {
                 <h1 className="mt-4 text-4xl font-medium md:text-5xl text-[#008080]">
                   FINOVATE Consulting Limited
                 </h1>
+                <p className="mt-2 text-base font-normal text-[#C0C0C0]">
+                  Empowering your financial strategies
+                </p>
                 <p className="mt-4 text-base font-normal text-[#C0C0C0]">
                   We are a team of experienced consultants dedicated to
                   providing top-notch consulting services to help your business
                   thrive.
                 </p>
-                <div className="mt-6">
-                  <Link
-                    href="#book-a-session"
-                    className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#008080] border border-transparent rounded-md items-center hover:bg-[#4A4A4A] focus:bg-[#4A4A4A]"
-                    role="button"
-                  >
-                    Book a Session
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -161,7 +169,7 @@ export default function Home() {
                 Our Services
               </h2>
               <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-8 font-pj">
-                Lorem ipsum dolor sit amet, consectetur adipis elit
+                Below are the categories of services we offer.
               </p>
             </motion.div>
 
@@ -208,7 +216,7 @@ export default function Home() {
                   />
                 </svg>
                 <h3 className="mt-12 text-xl font-bold text-gray-900 font-pj">
-                  Support
+                  Accounting Services
                 </h3>
                 <p className="mt-5 text-base text-gray-600 font-pj">
                   Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
@@ -486,14 +494,23 @@ export default function Home() {
 
         <section className="py-12 bg-white sm:py-16 lg:py-20" id="consultants">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="text-center">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="text-center"
+            >
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
                 Our Consultants
               </h2>
-            </div>
+            </motion.div>
 
             <div className="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-20 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
-              <div>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
                 <img
                   className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
                   src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png"
@@ -505,9 +522,13 @@ export default function Home() {
                 <p className="mt-2 text-base font-normal text-gray-600 font-pj">
                   Co founder, Chairman, Executive Director
                 </p>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2 }}
+              >
                 <img
                   className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
                   src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png"
@@ -519,9 +540,13 @@ export default function Home() {
                 <p className="mt-2 text-base font-normal text-gray-600 font-pj">
                   Co founder, Chairman, Executive Director
                 </p>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 3 }}
+              >
                 <img
                   className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
                   src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png"
@@ -533,9 +558,13 @@ export default function Home() {
                 <p className="mt-2 text-base font-normal text-gray-600 font-pj">
                   Co founder, Chairman, Executive Director
                 </p>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 4 }}
+              >
                 <img
                   className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
                   src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-4.png"
@@ -547,7 +576,7 @@ export default function Home() {
                 <p className="mt-2 text-base font-normal text-gray-600 font-pj">
                   Co founder, Chairman, Executive Director
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
