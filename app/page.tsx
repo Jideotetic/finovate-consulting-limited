@@ -266,8 +266,9 @@ export default function Home() {
               </h2>
 
               <p className="text-gray-600 max-w-lg mx-auto mb-12 mt-8">
-                We're more than just consultants, we're long-term partners
-                invested in your growth. Here&apos;s what sets us apart:
+                We&apos;re more than just consultants, we&apos;re long-term
+                partners invested in your growth. Here&apos;s what sets us
+                apart:
               </p>
             </motion.div>
 
