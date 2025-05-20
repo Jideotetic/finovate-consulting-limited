@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, RefObject } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 interface FAQItem {
   question: string;
