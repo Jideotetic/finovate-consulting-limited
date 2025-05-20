@@ -62,6 +62,27 @@ const benefits = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Sarah A.",
+    role: "Founder, StartUpHub",
+    quote:
+      "They streamlined our accounting and helped us raise funding faster with their financial models. A game-changer.",
+  },
+  {
+    name: "David M.",
+    role: "COO, GreenScale Inc.",
+    quote:
+      "Working with them was seamless, our business processes are now 30% more efficient. Highly recommend!",
+  },
+  {
+    name: "Lisa T.",
+    role: "CEO, BlueWave Analytics",
+    quote:
+      "Professional, responsive, and incredibly knowledgeable. We trust them with everything finance-related.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -294,7 +315,7 @@ export default function Home() {
 
         {/* TESTIMONIAL */}
 
-        {/* <section className="bg-gray-50 py-16 px-4">
+        <section className="bg-gray-50 py-16 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
             <div className="grid md:grid-cols-3 gap-8 text-left">
@@ -311,7 +332,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* <section className="py-12 bg-white sm:py-16 lg:py-20" id="consultants">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
