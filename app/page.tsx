@@ -10,6 +10,7 @@ import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
 import FAQAccordion from "@/components/faq";
+import SectionContainer from "@/components/section-container";
 
 const services = [
   {
@@ -97,118 +98,88 @@ const testimonials = [
   },
 ];
 
+const navigation = [
+  { name: "About Us", href: "#about-us" },
+  { name: "Our Services", href: "#services" },
+  { name: "Contact Us", href: "#contact" },
+  { name: "FAQ", href: "#faq" },
+];
+
 export default function Home() {
   return (
     <>
-      <header className="h-screen text-black bg-white">
+      <header className="h-screen">
         <motion.div
-          initial={{ y: -50, opacity: 0 }}
+          initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="bg-white shadow-md w-full fixed left-0 right-0 top-0 z-50"
         >
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-            <div className="flex items-center justify-between h-16 md:h-20">
-              <div className="flex-shrink-0">
-                <Link href="/" className="flex items-center">
-                  <Image
-                    className="h-auto w-17"
-                    src="/finovate.svg"
-                    alt="Finovate logo"
-                    width={0}
-                    height={0}
-                    priority
-                  />
-                </Link>
-              </div>
+          <SectionContainer>
+            <div className="flex items-center justify-between h-20">
+              <Link href="/" className="shrink-0">
+                <Image
+                  className="h-auto w-17"
+                  src="/finovate.svg"
+                  alt="Finovate logo"
+                  width={0}
+                  height={0}
+                  priority
+                />
+              </Link>
 
+              {/* Mobile Navigation */}
               <Popover className="group">
-                <PopoverButton className="focus:outline-none inline-flex p-2 cursor-pointer text-black transition-all duration-200 rounded-md md:hidden focus:bg-gray-100 hover:bg-gray-100">
-                  <AiOutlineClose className="text-[#008080] text-3xl hidden group-data-[open]:block" />
-                  <AiOutlineMenu className="text-[#008080] text-3xl group-data-[open]:hidden" />
+                <PopoverButton className="focus:outline-none inline-flex p-2 text-3xl cursor-pointer transition-all duration-200 rounded-md md:hidden focus:bg-gray-300 hover:bg-gray-300">
+                  <AiOutlineClose className="text-[#008080] hidden group-data-[open]:block" />
+                  <AiOutlineMenu className="text-[#008080] group-data-[open]:hidden" />
                 </PopoverButton>
                 <PopoverBackdrop
                   transition
-                  className="fixed inset-0 bg-black/70 top-[64px] transition duration-300 ease-out data-[closed]:opacity-0"
+                  className="fixed inset-0 bg-black/70 top-20 transition duration-300 ease-out data-[closed]:opacity-0"
                 />
                 <PopoverPanel
                   transition
-                  className="absolute transition duration-300 ease-in-out left-0 data-[closed]:-translate-x-[100%] h-[calc(100vh-64px)] top-[64px] bg-white w-4/5 min-[425px]:w-1/2 p-4 pl-6 pb-10"
+                  className="absolute transition duration-300 ease-in-out left-0 data-[closed]:-translate-x-[100%] h-[calc(100vh-80px)] top-20 bg-white w-4/5 min-[425px]:w-1/2 p-4 pl-6 pb-10"
                 >
-                  <nav>
-                    <div className="flow-root">
-                      <div className="flex flex-col -my-2 space-y-1">
-                        <CloseButton
-                          as={Link}
-                          href="#about-us"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          About Us
-                        </CloseButton>
-                        <CloseButton
-                          as={Link}
-                          href="#services"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          Our Services
-                        </CloseButton>
-                        <CloseButton
-                          as={Link}
-                          href="#contact"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          Contact Us
-                        </CloseButton>
-                        <CloseButton
-                          as={Link}
-                          href="#faq"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          FAQ
-                        </CloseButton>
-                      </div>
-                    </div>
+                  <nav className="flex flex-col space-y-4">
+                    {navigation.map((item) => (
+                      <CloseButton
+                        as={Link}
+                        key={item.name}
+                        href={item.href}
+                        className="font-medium transition-all duration-200 hover:text-black focus:text-black text-[#008080]"
+                      >
+                        {item.name}
+                      </CloseButton>
+                    ))}
                   </nav>
                 </PopoverPanel>
               </Popover>
 
-              <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
-                <Link
-                  href="#about-us"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="#services"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                >
-                  Our Services
-                </Link>
-                <Link
-                  href="#contact"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="#faq"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                >
-                  FAQ
-                </Link>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:block md:space-x-10">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="font-medium transition-all duration-200 hover:text-black focus:text-black text-[#008080]"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </nav>
             </div>
-          </div>
+          </SectionContainer>
         </motion.div>
 
         <motion.div
-          initial={{ y: -50, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center"
         >
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+          <SectionContainer>
             <div className="grid items-center grid-cols-1 md:grid-cols-2">
               <div>
                 <h1 className="mt-4 text-4xl font-medium md:text-5xl text-[#008080]">
@@ -224,7 +195,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
+          </SectionContainer>
         </motion.div>
       </header>
 

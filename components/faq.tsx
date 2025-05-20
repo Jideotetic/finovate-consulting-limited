@@ -32,7 +32,7 @@ const faqs: FAQItem[] = [
   },
 ];
 
-const FAQAccordion: React.FC = () => {
+export default function FAQAccordion() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const contentRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -100,6 +100,4 @@ const FAQAccordion: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default FAQAccordion;
+}
