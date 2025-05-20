@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import * as motion from "motion/react-client";
 
 interface FAQItem {
   question: string;
@@ -9,24 +10,25 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "What types of businesses do you work with?",
+    question: "What kind of businesses do you typically work with?",
     answer:
-      "We work with startups, small businesses, and growing enterprises across industries including tech, retail, services, and more.",
+      "We specialize in working with small to medium-sized enterprises (SMEs), startups, and solopreneurs—especially those looking to scale, improve cash flow, or implement better financial and operational strategies.",
   },
   {
-    question: "Do you offer one-time or ongoing services?",
+    question: "Can you help me develop a growth strategy for my business?",
     answer:
-      "Both! We offer ongoing accounting and consulting plans, as well as one-time financial analysis, valuations, or business plan support.",
+      "Yes, we help businesses create customized growth plans by aligning financial goals, operational capabilities, and market opportunities. This includes budgeting, resource planning, and milestone tracking.",
   },
   {
-    question: "What tools or platforms do you support?",
+    question:
+      " How do I know if I need a business consultant or just an accountant?",
     answer:
-      "We support QuickBooks, Xero, Excel-based modeling, and cloud tools like Gusto, Stripe, HubSpot, and others.",
+      "If you are only looking to manage your books or file taxes, an accountant may be enough. But if you are seeking to grow, solve cash flow issues, or improve operations, a business consultant provides a more broad strategic advantage.",
   },
   {
-    question: "How do I get started?",
+    question: "What financial reports should I be reviewing regularly?",
     answer:
-      "Simple! Just book a free consultation and we’ll assess your needs, then tailor a service package for your goals.",
+      "At minimum, you should track your profit and loss statement, cash flow statement, and balance sheet. We implement real-time tracking and also offer custom dashboards to simplify your financial tracking.",
   },
 ];
 
@@ -52,13 +54,24 @@ const FAQAccordion: React.FC = () => {
 
   return (
     <section className="bg-white py-16 px-4" id="faq">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          Frequently Asked Questions
-        </h2>
+      <div className="max-w-2xl mx-auto">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Frequently Asked Questions
+          </h2>
+        </motion.div>
+
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
               key={index}
               className="border rounded-lg shadow-sm overflow-hidden"
             >
@@ -81,7 +94,7 @@ const FAQAccordion: React.FC = () => {
               >
                 <div className="pb-4 text-gray-700">{faq.answer}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

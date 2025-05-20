@@ -100,7 +100,7 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <header className="h-screen">
+      <header className="h-screen text-black bg-white">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -112,11 +112,11 @@ export default function Home() {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/finovate.png"
+                    className="h-auto w-17"
+                    src="/finovate.svg"
                     alt="Finovate logo"
-                    width={50}
+                    width={0}
                     height={0}
-                    style={{ width: "auto", height: "auto" }}
                     priority
                   />
                 </Link>
@@ -140,7 +140,7 @@ export default function Home() {
                       <div className="flex flex-col -my-2 space-y-1">
                         <CloseButton
                           as={Link}
-                          href="about-us"
+                          href="#about-us"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
                           About Us
@@ -174,7 +174,7 @@ export default function Home() {
 
               <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
                 <Link
-                  href="about-us"
+                  href="#about-us"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   About Us
@@ -229,6 +229,85 @@ export default function Home() {
       </header>
 
       <main>
+        <section className="bg-white py-12 sm:py-16 lg:py-20" id="about-us">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-bold leading-tight text-[#008080] sm:text-4xl xl:text-5xl font-pj">
+                About Us
+              </h2>
+            </motion.div>
+            <div className="grid grid-cols-1 mt-10 text-center">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                At <span className="font-semibold">Finovate Consulting</span>,
+                we exist to empower small and medium-sized enterprises (SMEs),
+                startups, and solopreneurs with the clarity, control, and
+                confidence they need to grow sustainably and profitably.
+              </p>
+
+              <p className="text-gray-700 text-lg max-w-2xl mx-auto mt-8">
+                Rooted in the belief that every business deserves expert
+                support, we offer a full suite of services including{" "}
+                <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
+                <strong>Financial Advisory</strong>,{" "}
+                <strong>Data & Business Analysis</strong>, and{" "}
+                <strong>Tax Solutions</strong>, each tailored to meet the unique
+                needs of every client.
+              </p>
+            </div>
+
+            {/* Approach Icons */}
+            <div className="grid sm:grid-cols-3 gap-6 text-center mb-16">
+              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
+                <div className="text-3xl mb-2">📊</div>
+                <div className="font-semibold text-gray-800">
+                  Data-driven Insights
+                </div>
+              </div>
+              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
+                <div className="text-3xl mb-2">💡</div>
+                <div className="font-semibold text-gray-800">
+                  Technology-enabled Operations
+                </div>
+              </div>
+              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
+                <div className="text-3xl mb-2">🤝</div>
+                <div className="font-semibold text-gray-800">
+                  Client-first Service
+                </div>
+              </div>
+            </div>
+
+            {/* Vision & Mission */}
+            <div className="grid md:grid-cols-2 gap-12 text-left text-gray-700">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">🌍 Vision</h3>
+                <p>
+                  To be the trusted global partner for small and medium scale
+                  businesses, empowering them with data-driven financial
+                  insights and strategic advisory services to drive sustainable
+                  growth, efficiency, and profitability.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4">🎯 Mission</h3>
+                <p>
+                  Our mission is to provide tailored Bookkeeping, Accounting,
+                  Financial Advisory, Data Analysis, Business Analysis, and Tax
+                  solutions that help businesses streamline operations, make
+                  informed decisions, and achieve financial success. We leverage
+                  technology, deep industry expertise, and a client-first
+                  approach to deliver exceptional value and measurable results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gray-50 py-12 sm:py-16 lg:py-20" id="services">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <motion.div
@@ -310,10 +389,21 @@ export default function Home() {
 
         <section className="bg-gray-50 py-16 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+            </motion.div>
+
             <div className="grid md:grid-cols-3 gap-8 text-left">
               {testimonials.map((t, idx) => (
-                <div
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 2 }}
                   key={idx}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 >
@@ -321,7 +411,7 @@ export default function Home() {
                   <div className="text-sm text-gray-600">
                     <span className="font-semibold">{t.name}</span> — {t.role}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
