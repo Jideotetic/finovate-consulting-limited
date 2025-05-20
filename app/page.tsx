@@ -9,29 +9,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
+import FAQAccordion from "@/components/faq";
 
 const services = [
   {
     title: "Accounting Services",
     icon: "📘",
     description: "Keep your finances accurate, compliant, and stress-free.",
-    items: ["Bookkeeping", "Tax Services", "Payroll & Cloud Accounting"],
-    link: "/services/accounting",
+    items: [
+      "Bookkeeping",
+      "Outsourced Accounting",
+      "Cloud Accounting",
+      "Payroll Processing",
+      "Tax Services",
+    ],
   },
   {
     title: "Financial Consulting",
     icon: "📊",
     description:
       "Make smarter decisions with data-backed financial strategies.",
-    items: ["Financial Modeling", "Budget Planning", "Business Valuation"],
-    link: "/services/financial-consulting",
+    items: [
+      "Financial modeling and analysis",
+      "Budget planning",
+      "Business valuation",
+      "Business funding",
+    ],
   },
   {
     title: "Business Consulting",
     icon: "🧭",
     description: "Optimize and grow with tailored business solutions.",
-    items: ["Workflow Automation", "Change Management", "Business Planning"],
-    link: "/services/business-consulting",
+    items: [
+      "Workflow automation",
+      "Business process mapping and optimization",
+      "Change management",
+      "Business plan development",
+    ],
   },
 ];
 
@@ -126,14 +140,6 @@ export default function Home() {
                       <div className="flex flex-col -my-2 space-y-1">
                         <CloseButton
                           as={Link}
-                          href="/"
-                          className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black  hover:text-[#008080] focus:text-[#008080]"
-                        >
-                          Home
-                        </CloseButton>
-
-                        <CloseButton
-                          as={Link}
                           href="about-us"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
@@ -141,21 +147,21 @@ export default function Home() {
                         </CloseButton>
                         <CloseButton
                           as={Link}
-                          href="services"
+                          href="#services"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
                           Our Services
                         </CloseButton>
                         <CloseButton
                           as={Link}
-                          href="contact"
+                          href="#contact"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
-                          Contact
+                          Contact Us
                         </CloseButton>
                         <CloseButton
                           as={Link}
-                          href="faq"
+                          href="#faq"
                           className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                         >
                           FAQ
@@ -168,32 +174,25 @@ export default function Home() {
 
               <nav className="hidden md:flex md:items-center md:ml-auto md:space-x-10">
                 <Link
-                  href="/"
-                  className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
-                >
-                  Home
-                </Link>
-
-                <Link
                   href="about-us"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   About Us
                 </Link>
                 <Link
-                  href="services"
+                  href="#services"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   Our Services
                 </Link>
                 <Link
-                  href="contact"
+                  href="#contact"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
-                  Contact
+                  Contact Us
                 </Link>
                 <Link
-                  href="faq"
+                  href="#faq"
                   className="inline-flex py-2 text-base font-medium transition-all duration-200 text-black hover:text-[#008080] focus:text-[#008080]"
                 >
                   FAQ
@@ -230,7 +229,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+        <section className="bg-gray-50 py-12 sm:py-16 lg:py-20" id="services">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -243,7 +242,7 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 xl:mt-24">
+            <div className="grid grid-cols-1 mt-10 text-center sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3">
               {services.map((service, idx) => (
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -252,7 +251,7 @@ export default function Home() {
                   key={idx}
                   className="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow"
                 >
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-xl font-semibold mb-2 text-black">
                     <span className="mr-2 text-2xl">{service.icon}</span>
                     {service.title}
                   </h3>
@@ -262,12 +261,6 @@ export default function Home() {
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
-                  <a
-                    href={service.link}
-                    className="text-blue-600 font-medium hover:underline"
-                  >
-                    Explore {service.title.split(" ")[0]} →
-                  </a>
                 </motion.div>
               ))}
             </div>
@@ -275,7 +268,7 @@ export default function Home() {
         </section>
 
         <section className="bg-white py-12 sm:py-16 lg:py-20">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="px-4 mx-auto max-w-4xl sm:px-6 lg:px-8">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -334,102 +327,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="py-12 bg-white sm:py-16 lg:py-20" id="consultants">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-                Our Consultants
-              </h2>
-            </motion.div>
-
-            <div className="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-20 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img
-                  className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-                  src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png"
-                  alt=""
-                />
-                <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-                  Jerome Bell
-                </p>
-                <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-                  Co founder, Chairman, Executive Director
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 2 }}
-              >
-                <img
-                  className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-                  src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png"
-                  alt=""
-                />
-                <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-                  Jerome Bell
-                </p>
-                <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-                  Co founder, Chairman, Executive Director
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 3 }}
-              >
-                <img
-                  className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-                  src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png"
-                  alt=""
-                />
-                <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-                  Jerome Bell
-                </p>
-                <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-                  Co founder, Chairman, Executive Director
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 4 }}
-              >
-                <img
-                  className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-                  src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-4.png"
-                  alt=""
-                />
-                <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-                  Jerome Bell
-                </p>
-                <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-                  Co founder, Chairman, Executive Director
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section> */}
+        <FAQAccordion />
       </main>
 
-      <footer className="py-10 bg-[#4A4A4A] text-white" id="book-a-session">
+      <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-16 gap-x-12">
             <div className="sm:col-span-2">
               <form action="#" className="mt-6">
-                <p>Send a message to book a session</p>
                 <div className="mt-3">
                   <label htmlFor="email" className="">
                     Email
