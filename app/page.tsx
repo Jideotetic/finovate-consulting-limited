@@ -11,6 +11,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
 import FAQAccordion from "@/components/faq";
 import SectionContainer from "@/components/section-container";
+import { BiCheckCircle } from "react-icons/bi";
 
 const services = [
   {
@@ -105,6 +106,12 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ];
 
+const approach = [
+  "Technology-enabled Operations",
+  "Data-driven Insights",
+  "Client-first Service",
+];
+
 export default function Home() {
   return (
     <>
@@ -196,27 +203,35 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="bg-white py-12 sm:py-16 lg:py-20" id="about-us">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="bg-white py-12 text-center" id="about-us">
+          <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
-              className="text-center"
+              transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-bold leading-tight text-[#008080] sm:text-4xl xl:text-5xl font-pj">
+              <h2 className="text-3xl font-extrabold text-[#008080]">
                 About Us
               </h2>
             </motion.div>
-            <div className="grid grid-cols-1 mt-10 text-center">
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+
+            <div className="space-y-5 mt-10 text-justify max-w-2xl mx-auto text-gray-700">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
                 At <span className="font-semibold">Finovate Consulting</span>,
                 we exist to empower small and medium-sized enterprises (SMEs),
                 startups, and solopreneurs with the clarity, control, and
                 confidence they need to grow sustainably and profitably.
-              </p>
+              </motion.div>
 
-              <p className="text-gray-700 text-lg max-w-2xl mx-auto mt-8">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
                 Rooted in the belief that every business deserves expert
                 support, we offer a full suite of services including{" "}
                 <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
@@ -224,44 +239,55 @@ export default function Home() {
                 <strong>Data & Business Analysis</strong>, and{" "}
                 <strong>Tax Solutions</strong>, each tailored to meet the unique
                 needs of every client.
-              </p>
+              </motion.div>
             </div>
 
             {/* Approach Icons */}
-            <div className="grid sm:grid-cols-3 gap-6 text-center mb-16">
-              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
-                <div className="text-3xl mb-2">📊</div>
-                <div className="font-semibold text-gray-800">
-                  Data-driven Insights
-                </div>
-              </div>
-              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
-                <div className="text-3xl mb-2">💡</div>
-                <div className="font-semibold text-gray-800">
-                  Technology-enabled Operations
-                </div>
-              </div>
-              <div className="bg-gray-50 p-6 rounded shadow hover:shadow-md transition">
-                <div className="text-3xl mb-2">🤝</div>
-                <div className="font-semibold text-gray-800">
-                  Client-first Service
-                </div>
-              </div>
-            </div>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="my-5 space-y-5 max-w-2xl mx-auto text-gray-700"
+            >
+              <p className="text-left">Our approach is simple</p>
+
+              <ul className="space-y-2">
+                {approach.map((item, idx) => (
+                  <li key={idx} className="flex items-start space-x-3">
+                    <BiCheckCircle className="h-6 w-6 text-[#008080] flex-shrink-0 mt-1" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
             {/* Vision & Mission */}
-            <div className="grid md:grid-cols-2 gap-12 text-left text-gray-700">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">🌍 Vision</h3>
+            <div className="text-justify text-gray-700 max-w-2xl mx-auto space-y-5">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="space-y-2"
+              >
+                <h3 className="text-xl font-semibold text-center">
+                  🌍 Our Vision
+                </h3>
                 <p>
                   To be the trusted global partner for small and medium scale
                   businesses, empowering them with data-driven financial
                   insights and strategic advisory services to drive sustainable
                   growth, efficiency, and profitability.
                 </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-4">🎯 Mission</h3>
+              </motion.div>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="space-y-2"
+              >
+                <h3 className="text-xl font-semibold text-center">
+                  🎯 Our Mission
+                </h3>
                 <p>
                   Our mission is to provide tailored Bookkeeping, Accounting,
                   Financial Advisory, Data Analysis, Business Analysis, and Tax
@@ -270,10 +296,10 @@ export default function Home() {
                   technology, deep industry expertise, and a client-first
                   approach to deliver exceptional value and measurable results.
                 </p>
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </section>
+          </SectionContainer>
+        </div>
 
         <section className="bg-gray-50 py-12 sm:py-16 lg:py-20" id="services">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -297,7 +323,7 @@ export default function Home() {
                   key={idx}
                   className="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow"
                 >
-                  <h3 className="text-xl font-semibold mb-2 text-black">
+                  <h3 className="text-xl font-semibold mb-2">
                     <span className="mr-2 text-2xl">{service.icon}</span>
                     {service.title}
                   </h3>
@@ -401,7 +427,7 @@ export default function Home() {
                     name="email"
                     id="email"
                     placeholder="Enter your email"
-                    className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   />
                 </div>
 
@@ -414,7 +440,7 @@ export default function Home() {
                     id="message"
                     rows={5}
                     placeholder=" Enter your message"
-                    className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    className="block w-full p-4  placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   ></textarea>
                 </div>
 
