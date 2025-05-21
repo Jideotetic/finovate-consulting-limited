@@ -148,7 +148,7 @@ export default function Home() {
                         as={Link}
                         key={item.name}
                         href={item.href}
-                        className="font-medium transition-all duration-200 hover:text-black focus:text-black text-[#008080]"
+                        className="font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0] text-[#008080]"
                       >
                         {item.name}
                       </CloseButton>
@@ -163,7 +163,7 @@ export default function Home() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="font-medium transition-all duration-200 hover:text-black focus:text-black text-[#008080]"
+                    className="font-medium transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0] text-[#008080]"
                   >
                     {item.name}
                   </Link>
@@ -177,24 +177,20 @@ export default function Home() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="h-full flex justify-center items-center py-20 md:pt-30 bg-[url('/ai-generated.jpg')] bg-no-repeat bg-cover bg-center"
+          className="h-full flex items-center text-center py-20 bg-radial from-[#C0C0C090] from-50% to-[#4A4A4A]"
         >
           <SectionContainer>
-            <div className="grid items-center grid-cols-1 md:grid-cols-2">
-              <div>
-                <h1 className="mt-4 text-4xl font-medium md:text-5xl text-[#008080]">
-                  FINOVATE Consulting Limited
-                </h1>
-                <p className="mt-2 text-base font-normal text-[#C0C0C0]">
-                  Empowering your financial strategies
-                </p>
-                <p className="mt-4 text-base font-normal text-[#C0C0C0]">
-                  We are a team of experienced consultants dedicated to
-                  providing top-notch consulting services to help your business
-                  thrive.
-                </p>
-              </div>
-            </div>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="space-y-2 text-[#008080]"
+            >
+              <h1 className="text-4xl font-extrabold md:text-5xl">
+                FINOVATE Consulting Limited
+              </h1>
+              <p className="italic">Empowering your financial strategies</p>
+            </motion.div>
           </SectionContainer>
         </motion.div>
       </header>
