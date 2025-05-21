@@ -184,14 +184,14 @@ export default function Home() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="h-full flex items-center text-center py-20 bg-radial from-[#C0C0C090] from-50% to-[#4A4A4A]"
+          className="h-full flex items-center text-center py-20 bg-[url('/ai-generated.jpg')] bg-cover bg-no-repeat bg-center bg-radial from-[#C0C0C090] from-50% to-[#4A4A4A]"
         >
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
-              className="space-y-2 text-[#008080]"
+              className="space-y-2 text-white"
             >
               <h1 className="text-4xl font-extrabold md:text-5xl">
                 FINOVATE Consulting Limited
