@@ -345,7 +345,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
             >
-              <h2 className="text-3xl font-bold text-[#008080]">
+              <h2 className="text-3xl font-extrabold text-[#008080]">
                 Why Choose Us
               </h2>
 
