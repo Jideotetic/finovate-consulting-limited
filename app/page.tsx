@@ -242,7 +242,6 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Approach Icons */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -261,7 +260,6 @@ export default function Home() {
               </ul>
             </motion.div>
 
-            {/* Vision & Mission */}
             <div className="text-justify text-gray-700 max-w-2xl mx-auto space-y-5">
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -301,20 +299,19 @@ export default function Home() {
           </SectionContainer>
         </div>
 
-        <section className="bg-gray-50 py-12 sm:py-16 lg:py-20" id="services">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="bg-gray-50 py-12 text-center" id="services">
+          <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
-              className="text-center"
             >
-              <h2 className="text-3xl font-bold leading-tight text-[#008080] sm:text-4xl xl:text-5xl font-pj">
+              <h2 className="text-3xl font-extrabold text-[#008080]">
                 Our Core Services
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 mt-10 text-center sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3">
+            <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3">
               {services.map((service, idx) => (
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -324,34 +321,35 @@ export default function Home() {
                   className="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow"
                 >
                   <h3 className="text-xl font-semibold mb-2">
-                    <span className="mr-2 text-2xl">{service.icon}</span>
+                    <span className="mr-2">{service.icon}</span>
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="list-disc list-inside text-gray-800 mb-4">
+                  <p className="text-gray-700 mb-4">{service.description}</p>
+                  <ul className="list-disc list-inside text-gray-700 mb-4">
                     {service.items.map((item, i) => (
-                      <li key={i}>{item}</li>
+                      <li className="text-gray-700" key={i}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+          </SectionContainer>
+        </div>
 
-        <section className="bg-white py-12 sm:py-16 lg:py-20">
-          <div className="px-4 mx-auto max-w-4xl sm:px-6 lg:px-8">
+        <div className="bg-white py-12 text-center">
+          <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
-              className="text-center"
             >
-              <h2 className="text-3xl font-bold leading-tight text-[#008080] sm:text-4xl xl:text-5xl font-pj">
+              <h2 className="text-3xl font-bold text-[#008080]">
                 Why Choose Us
               </h2>
 
-              <p className="text-gray-600 max-w-lg mx-auto mb-12 mt-8">
+              <p className="text-gray-700 max-w-lg mx-auto mb-12 mt-8">
                 We&apos;re more than just consultants, we&apos;re long-term
                 partners invested in your growth. Here&apos;s what sets us
                 apart:
@@ -370,28 +368,29 @@ export default function Home() {
                   <div className="text-3xl mr-4">{item.icon}</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-gray-700">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+          </SectionContainer>
+        </div>
 
         {/* TESTIMONIAL */}
 
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="max-w-6xl mx-auto text-center">
+        <div className="bg-gray-50 py-16 text-center">
+          <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
-              className="text-center"
             >
-              <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+              <h2 className="text-3xl font-extrabold text-[#008080]">
+                What Our Clients Say
+              </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="grid md:grid-cols-3 gap-8 text-left mt-8">
               {testimonials.map((t, idx) => (
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -407,8 +406,8 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+          </SectionContainer>
+        </div>
 
         <FAQAccordion />
       </main>

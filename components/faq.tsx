@@ -53,7 +53,7 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="bg-white py-16 px-4" id="faq">
+    <section className="bg-white py-16 px-4 text-center" id="faq">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -61,12 +61,12 @@ export default function FAQAccordion() {
           transition={{ duration: 2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-extrabold text-[#008080]">
             Frequently Asked Questions
           </h2>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mt-8">
           {faqs.map((faq, index) => (
             <motion.div
               initial={{ y: 50, opacity: 0 }}
