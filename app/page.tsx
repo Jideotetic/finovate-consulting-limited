@@ -100,7 +100,7 @@ const testimonials = [
 ];
 
 const navigation = [
-  { name: "About Us", href: "#about-us" },
+  { name: "About Us", href: "about-us" },
   { name: "Our Services", href: "#services" },
   { name: "Contact Us", href: "#contact" },
   { name: "FAQ", href: "#faq" },
@@ -205,6 +205,53 @@ export default function Home() {
       <main>
         <div className="bg-white py-12 text-center" id="about-us">
           <SectionContainer>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center text-justify mx-auto max-w-4xl">
+              <div className="space-y-5">
+                <h2 className="text-3xl font-extrabold text-[#008080]">
+                  About Us
+                </h2>
+                <p>
+                  At <span className="font-semibold">Finovate Consulting</span>,
+                  we exist to empower small and medium-sized enterprises (SMEs),
+                  startups, and solopreneurs with the clarity, control, and
+                  confidence they need to grow sustainably and profitably.
+                </p>
+              </div>
+              <div className="hidden md:block">
+                <Image
+                  className="h-auto w-full rounded-lg"
+                  src="/ai-generated.jpg"
+                  alt="Finovate logo"
+                  width={1000}
+                  height={0}
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center text-justify">
+              <p className="order-2">
+                Rooted in the belief that every business deserves expert
+                support, we offer a full suite of services including{" "}
+                <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
+                <strong>Financial Advisory</strong>,{" "}
+                <strong>Data & Business Analysis</strong>, and{" "}
+                <strong>Tax Solutions</strong>, each tailored to meet the unique
+                needs of every client.
+              </p>
+
+              <div className="hidden md:block">
+                <Image
+                  className="h-auto w-full rounded-lg"
+                  src="/ai-generated.jpg"
+                  alt="Finovate logo"
+                  width={1000}
+                  height={0}
+                  priority
+                />
+              </div>
+            </div>
+
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
