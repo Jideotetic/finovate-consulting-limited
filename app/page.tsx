@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
-import FAQAccordion from "@/components/faq";
 import SectionContainer from "@/components/section-container";
 
 const services = [
@@ -305,8 +304,6 @@ export default function Home() {
             </div>
           </SectionContainer>
         </div>
-
-        <FAQAccordion />
       </main>
 
       <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
