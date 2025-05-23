@@ -9,95 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
-import FAQAccordion from "@/components/faq";
 import SectionContainer from "@/components/section-container";
-import { BiCheckCircle } from "react-icons/bi";
-
-const services = [
-  {
-    title: "Accounting Services",
-    icon: "📘",
-    description: "Keep your finances accurate, compliant, and stress-free.",
-    items: [
-      "Bookkeeping",
-      "Outsourced Accounting",
-      "Cloud Accounting",
-      "Payroll Processing",
-      "Tax Services",
-    ],
-  },
-  {
-    title: "Financial Consulting",
-    icon: "📊",
-    description:
-      "Make smarter decisions with data-backed financial strategies.",
-    items: [
-      "Financial modeling and analysis",
-      "Budget planning",
-      "Business valuation",
-      "Business funding",
-    ],
-  },
-  {
-    title: "Business Consulting",
-    icon: "🧭",
-    description: "Optimize and grow with tailored business solutions.",
-    items: [
-      "Workflow automation",
-      "Business process mapping and optimization",
-      "Change management",
-      "Business plan development",
-    ],
-  },
-];
-
-const benefits = [
-  {
-    title: "Expert-Led Services",
-    description:
-      "Our team is made up of seasoned professionals with real-world experience in finance, accounting, and business operations.",
-    icon: "🎓",
-  },
-  {
-    title: "Tailored Solutions",
-    description:
-      "We don’t believe in one-size-fits-all. Every client receives custom strategies built around their goals.",
-    icon: "🧩",
-  },
-  {
-    title: "Reliable & Transparent",
-    description:
-      "We value clear communication, on-time delivery, and honest advice. No surprises — just results.",
-    icon: "🔍",
-  },
-  {
-    title: "Tech-Enabled Efficiency",
-    description:
-      "We leverage modern tools like cloud accounting, automation, and financial modeling to boost your business’s performance.",
-    icon: "⚙️",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Sarah A.",
-    role: "Founder, StartUpHub",
-    quote:
-      "They streamlined our accounting and helped us raise funding faster with their financial models. A game-changer.",
-  },
-  {
-    name: "David M.",
-    role: "COO, GreenScale Inc.",
-    quote:
-      "Working with them was seamless, our business processes are now 30% more efficient. Highly recommend!",
-  },
-  {
-    name: "Lisa T.",
-    role: "CEO, BlueWave Analytics",
-    quote:
-      "Professional, responsive, and incredibly knowledgeable. We trust them with everything finance-related.",
-  },
-];
 
 const navigation = [
   { name: "About Us", href: "about-us" },
@@ -198,10 +110,10 @@ export default function Home() {
             <div className="hidden md:block md:col-span-2 border-2 bg-[#008080] border-[#008080] rounded-lg">
               <Image
                 className="h-auto w-full rounded-lg -skew-4"
-                src="/ai-generated.jpg"
-                alt="Finovate logo"
+                src="/business-colleagues.jpg"
+                alt="COlleagues sitting in a round table"
                 width={1000}
-                height={0}
+                height={10}
                 priority
               />
             </div>
@@ -224,93 +136,71 @@ export default function Home() {
                 src="/ai-generated.jpg"
                 alt="Finovate logo"
                 width={1000}
-                height={0}
+                height={10}
                 priority
               />
             </div>
           </div>
         </div>
 
-        <div className="bg-white py-12 pt-20 px-4 text-center text-gray-600">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-extrabold text-[#008080]">About Us</h2>
-          </motion.div>
+        <div className="max-w-5xl mx-auto py-20 px-4 text-center text-gray-600">
+          <h2 className="text-xl font-semibold text-gray-600 md:hidden mb-5">
+            Our approach is simple
+          </h2>
 
-          <div className="space-y-5 mt-10 text-justify max-w-2xl mx-auto text-gray-700">
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              At <span className="font-semibold">Finovate Consulting</span>, we
-              exist to empower small and medium-sized enterprises (SMEs),
-              startups, and solopreneurs with the clarity, control, and
-              confidence they need to grow sustainably and profitably.
-            </motion.div>
+          <div className="relative">
+            <div className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+              <img
+                className="w-full"
+                src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
+                alt=""
+              />
+            </div>
 
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              Rooted in the belief that every business deserves expert support,
-              we offer a full suite of services including{" "}
-              <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
-              <strong>Financial Advisory</strong>,{" "}
-              <strong>Data & Business Analysis</strong>, and{" "}
-              <strong>Tax Solutions</strong>, each tailored to meet the unique
-              needs of every client.
-            </motion.div>
+            <div className="relative grid grid-cols-1 text-center gap-y-6 md:grid-cols-3 gap-x-12">
+              {approach.map((value, index) => {
+                return (
+                  <div key={index}>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                      <span className="text-xl font-semibold text-gray-700">
+                        {" "}
+                        {++index}{" "}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 font-medium">{value}</h3>
+                  </div>
+                );
+              })}
+            </div>
           </div>
+        </div>
 
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="my-5 space-y-5 max-w-2xl mx-auto text-gray-700"
-          >
-            <p className="text-left">Our approach is simple</p>
-
-            <ul className="space-y-2">
-              {approach.map((item, idx) => (
-                <li key={idx} className="flex items-start space-x-3">
-                  <BiCheckCircle className="h-6 w-6 text-[#008080] flex-shrink-0 mt-1" />
-                  <span className="font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <div className="text-justify text-gray-700 max-w-2xl mx-auto space-y-5">
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="space-y-2"
-            >
-              <h3 className="text-xl font-semibold text-center">
-                🌍 Our Vision
-              </h3>
+        <div className="bg-[#c0c0c03f] px-4 py-20 text-center text-gray-600">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center text-justify mb-10 md:mb-20 max-w-5xl mx-auto">
+            <div className="space-y-5 md:col-span-3 order-2 md:order-1">
+              <h3 className="text-xl font-semibold">🌍 Our Vision</h3>
               <p>
                 To be the trusted global partner for small and medium scale
                 businesses, empowering them with data-driven financial insights
                 and strategic advisory services to drive sustainable growth,
                 efficiency, and profitability.
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="space-y-2"
-            >
-              <h3 className="text-xl font-semibold text-center">
-                🎯 Our Mission
-              </h3>
+            </div>
+            <div className="md:col-span-2 border-2 bg-[#008080] border-[#008080] rounded-lg order-1 md:order-2">
+              <Image
+                className="h-auto w-full rounded-lg -skew-4"
+                src="/retinal.jpg"
+                alt="A eye"
+                width={1000}
+                height={10}
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center text-justify max-w-5xl mx-auto">
+            <div className="space-y-5 md:col-span-3 order-2">
+              <h3 className="text-xl font-semibold">🎯 Our Mission</h3>
               <p>
                 Our mission is to provide tailored Bookkeeping, Accounting,
                 Financial Advisory, Data Analysis, Business Analysis, and Tax
@@ -319,7 +209,18 @@ export default function Home() {
                 technology, deep industry expertise, and a client-first approach
                 to deliver exceptional value and measurable results.
               </p>
-            </motion.div>
+            </div>
+
+            <div className="order-1 md:col-span-2 border-2 bg-[#008080] border-[#008080] rounded-lg">
+              <Image
+                className="h-auto w-full rounded-lg skew-4"
+                src="/hand-shake.jpg"
+                alt="People placing hand on to each other"
+                width={1000}
+                height={10}
+                priority
+              />
+            </div>
           </div>
         </div>
       </main>

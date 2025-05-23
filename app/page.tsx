@@ -11,7 +11,6 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import * as motion from "motion/react-client";
 import FAQAccordion from "@/components/faq";
 import SectionContainer from "@/components/section-container";
-import { BiCheckCircle } from "react-icons/bi";
 
 const services = [
   {
@@ -106,12 +105,6 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ];
 
-const approach = [
-  "Technology-enabled Operations",
-  "Data-driven Insights",
-  "Client-first Service",
-];
-
 export default function Home() {
   return (
     <>
@@ -203,149 +196,6 @@ export default function Home() {
       </header>
 
       <main>
-        <div className="bg-white py-12 text-center" id="about-us">
-          <SectionContainer>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center text-justify mx-auto max-w-4xl">
-              <div className="space-y-5">
-                <h2 className="text-3xl font-extrabold text-[#008080]">
-                  About Us
-                </h2>
-                <p>
-                  At <span className="font-semibold">Finovate Consulting</span>,
-                  we exist to empower small and medium-sized enterprises (SMEs),
-                  startups, and solopreneurs with the clarity, control, and
-                  confidence they need to grow sustainably and profitably.
-                </p>
-              </div>
-              <div className="hidden md:block">
-                <Image
-                  className="h-auto w-full rounded-lg"
-                  src="/ai-generated.jpg"
-                  alt="Finovate logo"
-                  width={1000}
-                  height={0}
-                  priority
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center text-justify">
-              <p className="order-2">
-                Rooted in the belief that every business deserves expert
-                support, we offer a full suite of services including{" "}
-                <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
-                <strong>Financial Advisory</strong>,{" "}
-                <strong>Data & Business Analysis</strong>, and{" "}
-                <strong>Tax Solutions</strong>, each tailored to meet the unique
-                needs of every client.
-              </p>
-
-              <div className="hidden md:block">
-                <Image
-                  className="h-auto w-full rounded-lg"
-                  src="/ai-generated.jpg"
-                  alt="Finovate logo"
-                  width={1000}
-                  height={0}
-                  priority
-                />
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl font-extrabold text-[#008080]">
-                About Us
-              </h2>
-            </motion.div>
-
-            <div className="space-y-5 mt-10 text-justify max-w-2xl mx-auto text-gray-700">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                At <span className="font-semibold">Finovate Consulting</span>,
-                we exist to empower small and medium-sized enterprises (SMEs),
-                startups, and solopreneurs with the clarity, control, and
-                confidence they need to grow sustainably and profitably.
-              </motion.div>
-
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                Rooted in the belief that every business deserves expert
-                support, we offer a full suite of services including{" "}
-                <strong>Bookkeeping</strong>, <strong>Accounting</strong>,{" "}
-                <strong>Financial Advisory</strong>,{" "}
-                <strong>Data & Business Analysis</strong>, and{" "}
-                <strong>Tax Solutions</strong>, each tailored to meet the unique
-                needs of every client.
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="my-5 space-y-5 max-w-2xl mx-auto text-gray-700"
-            >
-              <p className="text-left">Our approach is simple</p>
-
-              <ul className="space-y-2">
-                {approach.map((item, idx) => (
-                  <li key={idx} className="flex items-start space-x-3">
-                    <BiCheckCircle className="h-6 w-6 text-[#008080] flex-shrink-0 mt-1" />
-                    <span className="font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <div className="text-justify text-gray-700 max-w-2xl mx-auto space-y-5">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="space-y-2"
-              >
-                <h3 className="text-xl font-semibold text-center">
-                  🌍 Our Vision
-                </h3>
-                <p>
-                  To be the trusted global partner for small and medium scale
-                  businesses, empowering them with data-driven financial
-                  insights and strategic advisory services to drive sustainable
-                  growth, efficiency, and profitability.
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="space-y-2"
-              >
-                <h3 className="text-xl font-semibold text-center">
-                  🎯 Our Mission
-                </h3>
-                <p>
-                  Our mission is to provide tailored Bookkeeping, Accounting,
-                  Financial Advisory, Data Analysis, Business Analysis, and Tax
-                  solutions that help businesses streamline operations, make
-                  informed decisions, and achieve financial success. We leverage
-                  technology, deep industry expertise, and a client-first
-                  approach to deliver exceptional value and measurable results.
-                </p>
-              </motion.div>
-            </div>
-          </SectionContainer>
-        </div>
-
         <div className="bg-gray-50 py-12 text-center" id="services">
           <SectionContainer>
             <motion.div
