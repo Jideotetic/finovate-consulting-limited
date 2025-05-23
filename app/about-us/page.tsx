@@ -113,7 +113,7 @@ export default function Home() {
                 src="/business-colleagues.jpg"
                 alt="COlleagues sitting in a round table"
                 width={1000}
-                height={10}
+                height={300}
                 priority
               />
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 src="/ai-generated.jpg"
                 alt="Finovate logo"
                 width={1000}
-                height={10}
+                height={300}
                 priority
               />
             </div>
@@ -192,7 +192,7 @@ export default function Home() {
                 src="/retinal.jpg"
                 alt="A eye"
                 width={1000}
-                height={10}
+                height={300}
                 priority
               />
             </div>
@@ -217,7 +217,7 @@ export default function Home() {
                 src="/hand-shake.jpg"
                 alt="People placing hand on to each other"
                 width={1000}
-                height={10}
+                height={300}
                 priority
               />
             </div>
