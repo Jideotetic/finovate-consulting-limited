@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@headlessui/react": "^2.2.3",
     "motion": "^12.12.1",
     "next": "15.3.2",

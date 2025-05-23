@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import NextProgressBarProvider from "@/components/progress-bar-provider";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} antialiased text-gray-700 text-base md:text-lg`}
       >
-        {children}
+        <NextProgressBarProvider>{children}</NextProgressBarProvider>
       </body>
     </html>
   );
