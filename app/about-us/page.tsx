@@ -15,7 +15,7 @@ const navigation = [
   { name: "About Us", href: "about-us" },
   { name: "Our Services", href: "#services" },
   { name: "Contact Us", href: "#contact" },
-  { name: "FAQ", href: "#faq" },
+  { name: "FAQ", href: "faq" },
 ];
 
 const approach = [
@@ -24,10 +24,10 @@ const approach = [
   "Client-first Service",
 ];
 
-export default function Home() {
+export default function About() {
   return (
     <>
-      <header className="">
+      <header>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

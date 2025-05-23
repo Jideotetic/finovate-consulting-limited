@@ -102,7 +102,7 @@ const navigation = [
   { name: "About Us", href: "about-us" },
   { name: "Our Services", href: "#services" },
   { name: "Contact Us", href: "#contact" },
-  { name: "FAQ", href: "#faq" },
+  { name: "FAQ", href: "faq" },
 ];
 
 export default function Home() {
