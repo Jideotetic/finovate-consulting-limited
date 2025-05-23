@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import * as motion from "motion/react-client";
+import { useState } from "react";
 
 interface FAQItem {
   question: string;
