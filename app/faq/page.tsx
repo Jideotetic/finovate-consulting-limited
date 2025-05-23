@@ -92,7 +92,7 @@ const Faq = () => {
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="px-4 py-30 bg-[#c0c0c03f] min-h-screen"
+        className="px-4 pt-30 pb-10 bg-[#c0c0c03f] min-h-screen"
       >
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
