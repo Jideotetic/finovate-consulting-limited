@@ -7,13 +7,13 @@ const approach = [
   "Client-first Service",
 ];
 
-export default function About() {
+export default function Home() {
   return (
     <>
       <main>
         <motion.div
-          initial={{ x: -99, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="bg-[#c0c0c03f] py-12 px-4 pt-30 text-center text-gray-600"
         >
@@ -87,8 +87,8 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          initial={{ x: -99, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="max-w-5xl mx-auto py-20 px-4 text-center text-gray-600"
         >
@@ -104,8 +104,8 @@ export default function About() {
 
           <div className="relative">
             <motion.div
-              initial={{ x: -99, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 2 }}
               className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28"
             >
@@ -143,8 +143,8 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          initial={{ x: -99, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="bg-[#c0c0c03f] px-4 py-20 text-center text-gray-600"
         >
