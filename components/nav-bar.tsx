@@ -20,8 +20,8 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { name: "About Us", href: "about-us" },
-  { name: "Our Services", href: "#services" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Our Services", href: "services" },
+  { name: "Contact Us", href: "contact" },
   { name: "FAQ", href: "faq" },
 ];
 
@@ -30,7 +30,7 @@ export default function NavBar() {
   return (
     <SectionContainer>
       <div className="flex items-center justify-between h-20">
-        <Link href="/" className="shrink-0 ">
+        <Link href="/" className="shrink-0">
           <Image
             className="h-auto w-17"
             src="/finovate.svg"
@@ -63,7 +63,7 @@ export default function NavBar() {
                   href={link.href}
                   className={`${
                     pathname.includes(link.href) && "font-extrabold"
-                  } transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0] text-[#008080]`}
+                  } transition-all duration-200 hover:text-[#C0C0C0] text-[#008080]`}
                 >
                   {link.name}
                 </CloseButton>
@@ -80,7 +80,7 @@ export default function NavBar() {
               href={link.href}
               className={`${
                 pathname.includes(link.href) && "font-extrabold"
-              } transition-all duration-200 hover:text-[#C0C0C0] focus:text-[#C0C0C0] text-[#008080]`}
+              } transition-all duration-200 hover:text-[#C0C0C0] text-[#008080]`}
             >
               {link.name}
             </Link>

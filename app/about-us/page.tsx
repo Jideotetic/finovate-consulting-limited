@@ -109,10 +109,13 @@ export default function About() {
               transition={{ duration: 2 }}
               className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28"
             >
-              <img
+              <Image
                 className="w-full"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
-                alt=""
+                src="/curved-dotted-line.svg"
+                alt="Curved dotted line"
+                width={0}
+                height={0}
+                priority
               />
             </motion.div>
 

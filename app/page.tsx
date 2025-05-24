@@ -90,29 +90,29 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="h-full flex items-center text-center py-20 bg-[url('/ai-generated.jpg')] bg-cover bg-no-repeat bg-center bg-radial from-[#C0C0C090] from-50% to-[#4A4A4A]"
-      >
-        <SectionContainer>
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 2 }}
-            className="space-y-2 text-white"
-          >
-            <h1 className="text-4xl font-extrabold md:text-5xl">
-              FINOVATE Consulting Limited
-            </h1>
-            <p className="italic">Empowering your financial strategies</p>
-          </motion.div>
-        </SectionContainer>
-      </motion.div>
-
       <main>
-        <div className="bg-[#c0c0c03f] py-12 text-center" id="services">
+        <motion.div
+          initial={{ y: 500, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="h-screen flex items-center text-center bg-[url('/ai-generated.jpg')] bg-cover bg-no-repeat bg-center"
+        >
+          <SectionContainer>
+            <motion.div
+              initial={{ x: -99, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 3 }}
+              className="space-y-2 text-white"
+            >
+              <h1 className="text-4xl font-extrabold md:text-5xl">
+                FINOVATE Consulting Limited
+              </h1>
+              <p className="italic">Empowering your financial strategies</p>
+            </motion.div>
+          </SectionContainer>
+        </motion.div>
+
+        {/* <div className="bg-[#c0c0c03f] py-12 text-center" id="services">
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -149,9 +149,9 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div>
+        </div> */}
 
-        <div className="bg-white py-12 text-center">
+        {/* <div className="bg-white py-12 text-center">
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -187,11 +187,11 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div>
+        </div> */}
 
         {/* TESTIMONIAL */}
 
-        <div className="bg-gray-50 py-16 text-center">
+        {/* <div className="bg-gray-50 py-16 text-center">
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -220,10 +220,10 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div>
+        </div> */}
       </main>
 
-      <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
+      {/* <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-16 gap-x-12">
             <div className="sm:col-span-2">
@@ -270,7 +270,7 @@ export default function Home() {
             © Copyright 2025, All Rights Reserved
           </p>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
