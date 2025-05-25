@@ -1,44 +1,6 @@
 import * as motion from "motion/react-client";
 import SectionContainer from "@/components/section-container";
 
-const services = [
-  {
-    title: "Accounting Services",
-    icon: "📘",
-    description: "Keep your finances accurate, compliant, and stress-free.",
-    items: [
-      "Bookkeeping",
-      "Outsourced Accounting",
-      "Cloud Accounting",
-      "Payroll Processing",
-      "Tax Services",
-    ],
-  },
-  {
-    title: "Financial Consulting",
-    icon: "📊",
-    description:
-      "Make smarter decisions with data-backed financial strategies.",
-    items: [
-      "Financial modeling and analysis",
-      "Budget planning",
-      "Business valuation",
-      "Business funding",
-    ],
-  },
-  {
-    title: "Business Consulting",
-    icon: "🧭",
-    description: "Optimize and grow with tailored business solutions.",
-    items: [
-      "Workflow automation",
-      "Business process mapping and optimization",
-      "Change management",
-      "Business plan development",
-    ],
-  },
-];
-
 const benefits = [
   {
     title: "Expert-Led Services",
@@ -112,46 +74,7 @@ export default function Home() {
           </SectionContainer>
         </motion.div>
 
-        {/* <div className="bg-[#c0c0c03f] py-12 text-center" id="services">
-          <SectionContainer>
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
-            >
-              <h2 className="text-3xl font-extrabold text-[#008080]">
-                Our Core Services
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3">
-              {services.map((service, idx) => (
-                <motion.div
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 2 }}
-                  key={idx}
-                  className="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow"
-                >
-                  <h3 className="text-xl font-semibold mb-2">
-                    <span className="mr-2">{service.icon}</span>
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-700 mb-4">{service.description}</p>
-                  <ul className="list-disc list-inside text-gray-700 mb-4">
-                    {service.items.map((item, i) => (
-                      <li className="text-gray-700" key={i}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </SectionContainer>
-        </div> */}
-
-        {/* <div className="bg-white py-12 text-center">
+        <div className="bg-white py-12 text-center">
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -187,11 +110,11 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div> */}
+        </div>
 
         {/* TESTIMONIAL */}
 
-        {/* <div className="bg-gray-50 py-16 text-center">
+        <div className="bg-gray-50 py-16 text-center">
           <SectionContainer>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -220,10 +143,10 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div> */}
+        </div>
       </main>
 
-      {/* <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
+      <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-16 gap-x-12">
             <div className="sm:col-span-2">
@@ -270,7 +193,7 @@ export default function Home() {
             © Copyright 2025, All Rights Reserved
           </p>
         </div>
-      </footer> */}
+      </footer>
     </>
   );
 }

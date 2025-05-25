@@ -44,7 +44,7 @@ export default function About() {
               <Image
                 className="h-auto w-full rounded-lg -skew-4"
                 src="/business-colleagues.jpg"
-                alt="COlleagues sitting in a round table"
+                alt="Colleagues sitting in a round table"
                 width={1000}
                 height={300}
                 priority
