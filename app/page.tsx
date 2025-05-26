@@ -1,33 +1,6 @@
 import * as motion from "motion/react-client";
 import SectionContainer from "@/components/section-container";
 
-const benefits = [
-  {
-    title: "Expert-Led Services",
-    description:
-      "Our team is made up of seasoned professionals with real-world experience in finance, accounting, and business operations.",
-    icon: "🎓",
-  },
-  {
-    title: "Tailored Solutions",
-    description:
-      "We don’t believe in one-size-fits-all. Every client receives custom strategies built around their goals.",
-    icon: "🧩",
-  },
-  {
-    title: "Reliable & Transparent",
-    description:
-      "We value clear communication, on-time delivery, and honest advice. No surprises — just results.",
-    icon: "🔍",
-  },
-  {
-    title: "Tech-Enabled Efficiency",
-    description:
-      "We leverage modern tools like cloud accounting, automation, and financial modeling to boost your business’s performance.",
-    icon: "⚙️",
-  },
-];
-
 const testimonials = [
   {
     name: "Sarah A.",
@@ -54,8 +27,8 @@ export default function Home() {
     <>
       <main>
         <motion.div
-          initial={{ y: 500, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ x: -99, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2 }}
           className="h-screen flex items-center text-center bg-[url('/ai-generated.jpg')] bg-cover bg-no-repeat bg-center"
         >
@@ -74,51 +47,18 @@ export default function Home() {
           </SectionContainer>
         </motion.div>
 
-        <div className="bg-white py-12 text-center">
-          <SectionContainer>
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
-            >
-              <h2 className="text-3xl font-extrabold text-[#008080]">
-                Why Choose Us
-              </h2>
-
-              <p className="text-gray-700 max-w-lg mx-auto mb-12 mt-8">
-                We&apos;re more than just consultants, we&apos;re long-term
-                partners invested in your growth. Here&apos;s what sets us
-                apart:
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-10 text-left">
-              {benefits.map((item, idx) => (
-                <motion.div
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 2 }}
-                  key={idx}
-                  className="flex items-start"
-                >
-                  <div className="text-3xl mr-4">{item.icon}</div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                    <p className="text-gray-700">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </SectionContainer>
-        </div>
-
         {/* TESTIMONIAL */}
 
-        <div className="bg-gray-50 py-16 text-center">
+        <motion.div
+          initial={{ x: -99, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="bg-[#c0c0c03f] py-12 text-center"
+        >
           <SectionContainer>
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ x: -99, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 2 }}
             >
               <h2 className="text-3xl font-extrabold text-[#008080]">
@@ -129,8 +69,8 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 text-left mt-8">
               {testimonials.map((t, idx) => (
                 <motion.div
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ x: -99, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 2 }}
                   key={idx}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
@@ -143,7 +83,7 @@ export default function Home() {
               ))}
             </div>
           </SectionContainer>
-        </div>
+        </motion.div>
       </main>
 
       <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
