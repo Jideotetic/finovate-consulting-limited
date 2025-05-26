@@ -29,14 +29,14 @@ export default function Home() {
         <motion.div
           initial={{ x: -99, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           className="h-screen flex items-center text-center bg-[url('/ai-generated.jpg')] bg-cover bg-no-repeat bg-center"
         >
           <SectionContainer>
             <motion.div
               initial={{ x: -99, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 2 }}
               className="space-y-2 text-white"
             >
               <h1 className="text-4xl font-extrabold md:text-5xl">
@@ -50,9 +50,9 @@ export default function Home() {
         {/* TESTIMONIAL */}
 
         <motion.div
-          initial={{ x: -99, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           className="bg-[#c0c0c03f] py-12 text-center"
         >
           <SectionContainer>
@@ -71,7 +71,7 @@ export default function Home() {
                 <motion.div
                   initial={{ x: -99, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 3 }}
                   key={idx}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 >
