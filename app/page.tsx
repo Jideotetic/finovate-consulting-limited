@@ -146,7 +146,7 @@ export default function Home() {
         </motion.div>
       </main>
 
-      <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
+      {/* <footer className="py-10 bg-[#4A4A4A] text-white" id="contact">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-16 gap-x-12">
             <div className="sm:col-span-2">
@@ -193,7 +193,7 @@ export default function Home() {
             © Copyright 2025, All Rights Reserved
           </p>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
