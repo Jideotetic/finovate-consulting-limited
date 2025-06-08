@@ -16,32 +16,32 @@ const testimonials = [
   },
 ];
 
-const consultants = [
-  {
-    name: "Jerome Bell",
-    role: "Co-founder, Chairman, Executive Director",
-    image:
-      "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png",
-  },
-  {
-    name: "Jane Doe",
-    role: "Senior Consultant",
-    image:
-      "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png",
-  },
-  {
-    name: "John Smith",
-    role: "Financial Analyst",
-    image:
-      "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png",
-  },
-  {
-    name: "Emily Johnson",
-    role: "Operations Manager",
-    image:
-      "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-4.png",
-  },
-];
+// const consultants = [
+//   {
+//     name: "Jerome Bell",
+//     role: "Co-founder, Chairman, Executive Director",
+//     image:
+//       "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png",
+//   },
+//   {
+//     name: "Jane Doe",
+//     role: "Senior Consultant",
+//     image:
+//       "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png",
+//   },
+//   {
+//     name: "John Smith",
+//     role: "Financial Analyst",
+//     image:
+//       "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png",
+//   },
+//   {
+//     name: "Emily Johnson",
+//     role: "Operations Manager",
+//     image:
+//       "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-4.png",
+//   },
+// ];
 
 export default function Home() {
   return (
