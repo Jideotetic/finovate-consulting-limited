@@ -24,8 +24,8 @@ export default function FAQ() {
             <p className="text-center text-gray-600 textbase mt-9">
               Didn’t find the answer you are looking for?{" "}
               <a
-                href="#"
-                title=""
+                href="mailto:finovateconsults@gmail.com"
+                title="Send us a mail"
                 className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
               >
                 Contact our support

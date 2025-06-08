@@ -21,7 +21,6 @@ interface NavLink {
 const NAV_LINKS: NavLink[] = [
   { name: "About Us", href: "about-us" },
   { name: "Our Services", href: "our-services" },
-  { name: "Contact Us", href: "#contact" },
   { name: "FAQ", href: "faq" },
 ];
 
