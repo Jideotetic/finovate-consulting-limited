@@ -5,6 +5,7 @@ import NextProgressBarProvider from "@/components/progress-bar-provider";
 import * as motion from "motion/react-client";
 import NavBar from "@/components/nav-bar";
 import { Analytics } from "@vercel/analytics/next";
+import { Footer } from "@/components/layouts/footer";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -40,6 +41,7 @@ export default function RootLayout({
 
           {children}
           <Analytics />
+          <Footer />
         </NextProgressBarProvider>
       </body>
     </html>

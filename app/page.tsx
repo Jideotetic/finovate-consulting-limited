@@ -3,22 +3,16 @@ import SectionContainer from "@/components/section-container";
 
 const testimonials = [
   {
-    name: "Sarah A.",
-    role: "Founder, StartUpHub",
+    name: "Ozemoya O",
+    role: "Director, Ozykay Investments",
     quote:
-      "They streamlined our accounting and helped us raise funding faster with their financial models. A game-changer.",
+      "Partnering with Finovate Consulting has been one of the most important decisions we made at Ozykay Investment Ltd and a game-changing factor in our evolution as an SME. They helped us improve our financial tracking and reporting efficiency by 60%, grew our cash flow and enabled us gain invaluable insights on performance. Their professionalism, attention to detail, and strategic advisory have been invaluable. Finovate Consulting is a beneficial partner in our growth journey!",
   },
   {
-    name: "David M.",
-    role: "COO, GreenScale Inc.",
+    name: "Osahon E",
+    role: "Founder, Michènos luxury",
     quote:
-      "Working with them was seamless, our business processes are now 30% more efficient. Highly recommend!",
-  },
-  {
-    name: "Lisa T.",
-    role: "CEO, BlueWave Analytics",
-    quote:
-      "Professional, responsive, and incredibly knowledgeable. We trust them with everything finance-related.",
+      "Working with Finovate Consulting has been a game changer for our business. As a brand focused on luxury and detail, we needed a financial partner who could match that level of precision, and they delivered. Streamlining our inventory and timely financial reports, allowing us focus on growth and creativity, knowing our numbers are in trusted hands.",
   },
 ];
 
@@ -91,14 +85,14 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 text-left mt-8">
+            <div className="grid md:grid-cols-2 gap-8 text-left mt-8">
               {testimonials.map((t, idx) => (
                 <motion.div
                   initial={{ x: -99, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 3 }}
                   key={idx}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between"
                 >
                   <p className="text-gray-700 italic mb-4">“{t.quote}”</p>
                   <div className="text-sm text-gray-600">
@@ -108,7 +102,7 @@ export default function Home() {
               ))}
             </div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ x: -99, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 2 }}
@@ -141,7 +135,7 @@ export default function Home() {
                   </p>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </SectionContainer>
         </motion.div>
       </main>
