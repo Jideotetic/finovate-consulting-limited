@@ -133,7 +133,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center text-justify mb-10 md:mb-20 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center text-justify mb-5 max-w-5xl mx-auto">
             <motion.div
               initial={{ x: -99, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -146,7 +146,7 @@ export default function Home() {
                   {services[2].title}
                 </h3>
                 <p className="text-gray-700 mb-4">{services[2].description}</p>
-                <ul className="list-disc list-inside text-gray-700 mb-4">
+                <ul className="list-disc list-inside text-gray-700">
                   {services[2].items.map((item, i) => (
                     <li className="text-gray-700" key={i}>
                       {item}

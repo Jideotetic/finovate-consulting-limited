@@ -76,7 +76,7 @@ export default function About() {
             >
               <Image
                 className="h-auto w-full rounded-lg skew-4"
-                src="/ai-generated.jpg"
+                src="/group-afro-americans.jpg"
                 alt="Finovate logo"
                 width={1000}
                 height={300}
