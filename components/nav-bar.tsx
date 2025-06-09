@@ -31,8 +31,8 @@ export default function NavBar() {
       <div className="flex items-center justify-between h-20">
         <Link href="/" className="shrink-0">
           <Image
-            className="h-auto w-17"
-            src="/finovate.svg"
+            className="h-auto w-15"
+            src="/finovate.jpeg"
             alt="Company logo"
             width={68}
             height={49}
