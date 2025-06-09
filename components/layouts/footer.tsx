@@ -38,7 +38,7 @@ export function Footer() {
               <ul className="flex items-center space-x-3 mt-9">
                 <li>
                   <a
-                    href="https://linkedin.com/company/consult-finovate"
+                    href="https://www.linkedin.com/company/consult-finovate"
                     title="Linkedin"
                     className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-[#008080] focus:bg-[#008080]"
                   >
@@ -48,7 +48,7 @@ export function Footer() {
 
                 <li>
                   <a
-                    href="https://instagram.com/company/consult_finovate"
+                    href="https://www.instagram.com/consult_finovate/"
                     title="Instagram"
                     className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-[#008080] focus:bg-[#008080]"
                   >
