@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NextProgressBarProvider from "@/components/progress-bar-provider";
-import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/layouts/footer";
 import { Header } from "@/components/layouts/header";
 
@@ -29,7 +28,6 @@ export default function RootLayout({
         <NextProgressBarProvider>
           <Header />
           {children}
-          <Analytics />
           <Footer />
         </NextProgressBarProvider>
       </body>
